@@ -14,6 +14,7 @@ namespace LogicaNegocio.Logica.Accion
             var elResultado = new ResultadoEcuacionCuadratica();
             elResultado.PrimeraRaiz = elResultado.SegundaRaiz = null;
             
+
             var laValidacion = new Validacion.EcuacionesCuadraticas();
             if (laValidacion.AEsDiferenteDeCero(a))
             {
