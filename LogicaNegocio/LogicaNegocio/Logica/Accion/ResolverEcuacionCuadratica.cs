@@ -22,6 +22,7 @@ namespace LogicaNegocio.Logica.Accion
                 if (laValidacion.ElDiscriminanteEsMayorOIgualQueCero(elResultado.Discriminante))
                 {
                     elResultado.PrimeraRaiz = CalcularRaiz(a, b, c, elResultado.Discriminante, true);
+
                     elResultado.SegundaRaiz = CalcularRaiz(a, b, c, elResultado.Discriminante, false);
                 }
             }
@@ -48,9 +49,9 @@ namespace LogicaNegocio.Logica.Accion
             return elResultado;
         }
 
-        internal double CalcularRaiz(double a, double b, double c, double elDiscriminante, bool hagoUnaSuma)
+        internal double CalcularRaiz(double a, double b, double c, double elDiscriminante, bool hagoSuma)
         {
-            double elSigno = (hagoUnaSuma) ? 1.0 : -1.0;
+            double elSigno = (hagoSuma) ? 1.0 : -1.0;
             var elResultado = (-b + (elSigno) * Math.Sqrt(elDiscriminante)) / (2 * a);
             return elResultado;
         }
