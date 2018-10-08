@@ -49,7 +49,9 @@ namespace LogicaNegocio.Logica.Accion
             return elResultado;
         }
 
-        internal double CalcularRaiz(double a, double b, double c, double elDiscriminante, bool hagoSuma)
+     
+
+           internal double CalcularRaiz(double a, double b, double c, double elDiscriminante, bool hagoSuma)
         {
             double elSigno = (hagoSuma) ? 1.0 : -1.0;
             var elResultado = (-b + (elSigno) * Math.Sqrt(elDiscriminante)) / (2 * a);
